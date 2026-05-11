@@ -252,7 +252,7 @@ export default function App() {
       </header>
 
       {/* Filter Panel */}
-      <section className="bg-[#f9f9f9] border border-kompas-border p-6 mb-8">
+      <section className="bg-gray-50 border border-kompas-border p-6 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 items-end">
           {/* Provinsi */}
           <div>
@@ -389,7 +389,15 @@ export default function App() {
                       exit={{ opacity: 0 }}
                       className="hover:bg-gray-50 transition-colors"
                     >
-                      <td className="p-3 font-bold text-sm text-kompas-blue">{item.universitas}</td>
+                      <td className="p-3 font-bold text-sm text-kompas-blue">
+                        {item.situs ? (
+                          <a href={item.situs} target="_blank" rel="noreferrer" className="hover:underline">
+                            {item.universitas}
+                          </a>
+                        ) : (
+                          item.universitas
+                        )}
+                      </td>
                       <td className="p-3 text-sm font-medium">{item.prodi}</td>
                       <td className="p-3 text-xs hidden md:table-cell">{item.bidang}</td>
                       <td className="p-3 text-xs uppercase font-bold text-kompas-gray">{item.jenjang}</td>
