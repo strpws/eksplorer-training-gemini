@@ -45,7 +45,7 @@ export default function App() {
   const itemsPerPage = 20;
 
   useEffect(() => {
-    fetch('/data.txt')
+    fetch('./data.txt')
       .then(res => {
         if (!res.ok) throw new Error('Gagal memuat data');
         return res.text();
