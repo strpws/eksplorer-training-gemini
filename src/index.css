@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap');
+
+@theme {
+  --font-serif: "Lora", serif;
+  --font-sans: "PT Sans", sans-serif;
+  
+  --color-kompas-blue: #00599A;
+  --color-kompas-red: #c92b2c;
+  --color-kompas-gold: #F3C727;
+  --color-kompas-black: #141414;
+  --color-kompas-gray: #666666;
+  --color-kompas-border: #e5e5e5;
+}
+
+body {
+  @apply font-serif bg-white text-kompas-black antialiased;
+}
+
+.keyword {
+  @apply font-sans font-bold uppercase text-kompas-red tracking-wider;
+}
+
+.title {
+  @apply font-serif font-bold leading-tight;
+}
+
+.body-text {
+  @apply font-serif;
+}
+
+.chart-text {
+  @apply font-sans;
+}
+
+.chart-text-bold {
+  @apply font-sans font-bold;
+}
+
+/* Custom Table Styles for Bold Theme */
+.bold-header {
+  @apply bg-[#f0f0f0] border-b-2 border-kompas-black;
+}
+
+.bold-divider {
+  @apply border-b-2 border-kompas-black;
+}
+
+.sharp-input {
+  @apply rounded-none border border-gray-300 focus:border-kompas-blue focus:ring-0 outline-none;
+}
+
